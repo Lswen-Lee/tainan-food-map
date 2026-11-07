@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>巷口食記</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥢</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-slug="fu-ji-rou-yuan">
+  <!-- 1. 頂部導覽（不要改） -->
+  <nav class="topnav wrap"><a href="../index.html">← 回地圖</a></nav>
+
+  <main class="shop wrap">
+    <!-- 2. 店名、類別、價位（自動） -->
+    <div class="shop__hero" data-auto="hero"></div>
+    <h1 class="shop__name" data-auto="name"></h1>
+    <div class="shop__badges" data-auto="badges"></div>
+
+    <!-- 3. 一句話推薦（自動） -->
+    <p class="shop__line" data-auto="oneLiner"></p>
+
+    <!-- 4. 推薦品項 ✏️ 手寫：1–3 項，每項 dt＝品名＋價格，dd＝1–2 句描述 -->
+    <section class="section">
+      <h2>推薦品項</h2>
+      <dl>
+        <div class="dish">
+          <dt>肉圓（2 顆）<span class="dish__price">56 元</span></dt>
+        </div>
+      </dl>
+    </section>
+
+    <!-- 5. 我的心得 ✏️ 手寫（想吃：固定一行；吃過後換成心得） -->
+    <section class="section">
+      <h2>我的心得</h2>
+      <p class="muted">還沒去吃過，吃完再來補心得。</p>
+    </section>
+
+    <!-- 6. 小提醒 ✏️ 手寫：1–3 點；沒有就寫「目前沒有特別要注意的」 -->
+    <section class="section">
+      <h2>小提醒</h2>
+      <ul class="tips">
+        <li>先進店內點餐，再到櫃檯結帳</li>
+        <li>大骨湯只限內用免費喝</li>
+        <li>府前路一段 299 號是 2 店，營業時間不同，別走錯</li>
+      </ul>
+    </section>
+
+    <!-- 7. 店家資訊表＋小地圖（自動） -->
+    <section class="section">
+      <h2>店家資訊</h2>
+      <table class="info"><tbody data-auto="info"></tbody></table>
+      <div data-auto="mapLink"></div>
+      <div id="mini-map"></div>
+    </section>
+
+    <!-- 8. 資料來源（自動；沒有 sources 時會自動隱藏） -->
+    <section class="section" data-auto="sources"></section>
+  </main>
+
+  <!-- 9. 頁尾（不要改） -->
+  <footer class="footer" data-auto="footer"></footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../data/site.js"></script>
+  <script src="../data/shops.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/shop-page.js"></script>
+</body>
+</html>

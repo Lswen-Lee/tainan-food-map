@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>巷口食記｜美食地圖</title>
+  <meta name="description" content="我吃過、也願意推薦給朋友的在地美食地圖。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥢</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="masthead wrap">
+    <span class="masthead__kicker"><span data-site="area"></span>・美食地圖</span>
+    <h1><span data-site="title"></span><span class="stamp">口袋名單</span></h1>
+    <p data-site="subtitle"></p>
+  </header>
+
+  <main class="wrap">
+    <section class="filters" aria-label="篩選店家">
+      <div class="filter-row"><span class="filter-row__label">狀態</span><span id="filter-status" class="filter-row"></span></div>
+      <div class="filter-row"><span class="filter-row__label">吃什麼</span><span id="filter-category" class="filter-row"></span></div>
+      <div class="filter-row"><span class="filter-row__label">預算</span><span id="filter-price" class="filter-row"></span></div>
+      <div class="filter-row"><span class="filter-row__label">特色</span><span id="filter-tags" class="filter-row"></span></div>
+      <div class="result-count" id="result-count" aria-live="polite"></div>
+    </section>
+
+    <div class="layout">
+      <section class="cards" id="cards" aria-label="店家列表"></section>
+      <aside class="map-wrap" aria-label="店家地圖"><div id="map"></div></aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span data-site="author"></span> 的美食口袋名單 · 「想吃」的店家資訊來自網路查證，營業時間與價格請以店家公告為準  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="data/site.js"></script>
+  <script src="data/shops.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
