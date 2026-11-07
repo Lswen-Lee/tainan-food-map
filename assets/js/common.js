@@ -38,6 +38,7 @@
       if (typeof s.lat !== "number" || typeof s.lng !== "number") {
         problems.push(who + "的座標 lat／lng 必須是數字");
       }
+      if (s.gmap && !/^\d+$/.test(s.gmap)) problems.push(who + "的 gmap 必須是純數字的 Google 地圖店家編號");
       if (s.status && window.STATUSES.indexOf(s.status) === -1) {
         problems.push(who + "的狀態「" + s.status + "」只能是 吃過 或 想吃");
       }
@@ -79,6 +80,7 @@
   }
 
   function mapsLink(shop) {
+    if (shop.gmap) return "https://maps.google.com/?cid=" + shop.gmap;
     return "https://www.google.com/maps/search/?api=1&query=" + shop.lat + "," + shop.lng;
   }
 
