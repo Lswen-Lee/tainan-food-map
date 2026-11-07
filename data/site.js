@@ -8,7 +8,7 @@ window.SITE = {
   // 沒有任何店家時，地圖預設顯示的位置與縮放
   center: [22.99300, 120.20200],
   zoom: 15,
-  author: "（你的名字）"
+  author: "李欣文"
 };
 
 window.CATEGORIES = {
